@@ -17,7 +17,7 @@ namespace Contacts.Models
       _name = name;
       _phone = phone;
       _address = address;
-      instances(this);
+      _instances.Add(this);
     }
 
     public string GetName()
@@ -29,7 +29,7 @@ namespace Contacts.Models
       _name = name;
     }
 
-    public string GetPhone()
+    public int GetPhone()
     {
       return _phone;
     }
@@ -37,7 +37,7 @@ namespace Contacts.Models
     {
       _phone = phone;
     }
-    public string GetAddress()
+    public int GetAddress()
     {
       return _address;
     }
@@ -46,11 +46,11 @@ namespace Contacts.Models
       _address = address;
     }
 
-    public static List<contact> GetAll()
+    public static List<Contact> GetAll()
     {
       return _instances;
     }
-    
+
 
 
   }
