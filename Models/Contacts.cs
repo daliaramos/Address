@@ -8,15 +8,17 @@ namespace Contacts.Models
     {
       private string _name;
       private int _phone;
-      private int _address;
+      private string _street;
+      private int _zip;
       private static List<Contact> _instances = new List<Contact>{};
 
 
-    public Contact(string name, int phone, int address)
+    public Contact(string name, int phone, string street, int zip)
     {
       _name = name;
       _phone = phone;
-      _address = address;
+      _street = street;
+      _zip = zip;
       _instances.Add(this);
     }
 
@@ -33,25 +35,35 @@ namespace Contacts.Models
     {
       return _phone;
     }
-    public void SetPone(int phone)
+    public void SetPhone(int phone)
     {
       _phone = phone;
     }
-    public int GetAddress()
+    public string GetStreet()
     {
-      return _address;
+      return _street;
     }
-    public void SetAddress(int address)
+    public void SetStreet(string street)
     {
-      _address = address;
+      _street = street;
+    }
+
+    public int GetZip()
+    {
+      return _zip;
+    }
+    public void SetZip(int zip)
+    {
+      _zip = zip;
     }
 
     public static List<Contact> GetAll()
     {
       return _instances;
     }
-
-
-
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
-  }
+}

@@ -25,9 +25,18 @@ namespace Contacts.Controllers
         Contact newContact = new Contact(
         Request.Form["name"],
         Convert.ToInt32(Request.Form["phone"]),
-        Convert.ToInt32(Request.Form["address"])
+        Request.Form["steet"],
+        Convert.ToInt32(Request.Form["zip"])
+
         );
         return View("Form",newContact);
       }
+      [HttpPost("/clear")]
+        public ActionResult ItemListClear()
+        {
+          Contact.ClearAll();
+          List<Contact> allContacts = new List<Contact> {};
+          return View("index", allContacts);
+        }
     }
   }
