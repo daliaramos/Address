@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Address Book</title>
+  </head>
+  <body>
+    <h1>Add Contacts</h1>
+
+    <a href="">Submit a Contact</a>
+
+    @foreach (var contact in Model)
+    {
+      <h1>Name: @Contact.GetName()</h1>
+      <p>Phone: @Contact.GetPhone()</p>
+      <p>Address: @Contact.GetAddress()</p>
+    }
+
+<form action="" method="post">
+
+</form>
+
+  </body>
+</html>
