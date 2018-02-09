@@ -25,7 +25,7 @@ namespace Contacts.Controllers
         Contact newContact = new Contact(
         Request.Form["name"],
         Convert.ToInt32(Request.Form["phone"]),
-        Request.Form["steet"],
+        Request.Form["street"],
         Convert.ToInt32(Request.Form["zip"])
 
         );
