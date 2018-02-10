@@ -7,17 +7,17 @@
   </head>
   <body>
 
-<div class="container">
-  <h1>Add Contacts</h1>
-      <a href="/new">Create a Contact</a>
-      <br>
-      @foreach (var contact in Model)
-      {
-        <h3>Name: @contact.GetName()</h3>
-        <p>Phone: @contact.GetPhone()</p>
-        <p>Street: @contact.GetStreet()</p>
-        <p>Zip Code: @contact.GetZip()</p>
-      }
+    <div class="container">
+      <h1>Add Contacts</h1>
+        <a href="/new">Create a Contact</a>
+        <br>
+        @foreach (var contact in Model)
+        {
+          <h3>Name: @contact.GetName()</h3>
+          <p>Phone: @contact.GetPhone()</p>
+          <p>Street: @contact.GetStreet()</p>
+          <p>Zip Code: @contact.GetZip()</p>
+        }
       <br>
       <form action="/clear" method="post">
         <button type="submit" name="button">Clear</button>
