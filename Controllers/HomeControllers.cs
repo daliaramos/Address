@@ -19,7 +19,7 @@ namespace Contacts.Controllers
       {
         return View();
       }
-      [HttpPost("/display/newContact")]
+      [HttpPost("/newContact")]
       public ActionResult CreateContact()
       {
         Contact newContact = new Contact(
