@@ -14,12 +14,12 @@ namespace Contacts.Controllers
         return View(allContacts);
       }
 
-      [HttpGet("/new")]
-      public ActionResult CreateForm()
+      [HttpGet("/newContact/new")]
+      public ActionResult newContact()
       {
         return View();
       }
-      [HttpPost("/display")]
+      [HttpPost("/display/newContact")]
       public ActionResult CreateContact()
       {
         Contact newContact = new Contact(
